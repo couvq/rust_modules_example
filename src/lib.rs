@@ -32,6 +32,9 @@ use back_of_house::Breakfast as BackOfHouseBreakfast;
 // similar to named import/exports in javascript
 use std::{fmt, io};
 
+// can also use the glob operator for imports but this is not recommended
+// https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#the-glob-operator
+
 pub fn eat_at_restaurant() {
     let soup = Appetizer::Soup;
     let salad = Appetizer::Salad;
