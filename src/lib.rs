@@ -28,6 +28,9 @@ use back_of_house::Appetizer;
 // typically only used if certain imports have the same name
 // similar to the use of "as" in typescript
 use back_of_house::Breakfast as BackOfHouseBreakfast;
+// example of "nested paths" which is essentially importing many things from the same module
+// similar to named import/exports in javascript
+use std::{fmt, io};
 
 pub fn eat_at_restaurant() {
     let soup = Appetizer::Soup;
