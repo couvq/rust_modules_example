@@ -24,14 +24,17 @@ mod back_of_house {
 }
 
 use back_of_house::Appetizer;
-use back_of_house::Breakfast;
+// can provide a different name for the module with "as",
+// typically only used if certain imports have the same name
+// similar to the use of "as" in typescript
+use back_of_house::Breakfast as BackOfHouseBreakfast;
 
 pub fn eat_at_restaurant() {
     let soup = Appetizer::Soup;
     let salad = Appetizer::Salad;
     println!("{:#?}{:#?}", soup, salad);
     // Order a breakfast in the summer with Rye toast
-    let mut meal = Breakfast::summer("Rye");
+    let mut meal = BackOfHouseBreakfast::summer("Rye");
     // Change our mind about what bread we'd like
     meal.toast = String::from("Wheat");
     println!("I'd like {} toast please", meal.toast);
