@@ -23,12 +23,15 @@ mod back_of_house {
     }
 }
 
+use back_of_house::Appetizer;
+use back_of_house::Breakfast;
+
 pub fn eat_at_restaurant() {
-    let soup = back_of_house::Appetizer::Soup;
-    let salad = back_of_house::Appetizer::Salad;
+    let soup = Appetizer::Soup;
+    let salad = Appetizer::Salad;
     println!("{:#?}{:#?}", soup, salad);
     // Order a breakfast in the summer with Rye toast
-    let mut meal = back_of_house::Breakfast::summer("Rye");
+    let mut meal = Breakfast::summer("Rye");
     // Change our mind about what bread we'd like
     meal.toast = String::from("Wheat");
     println!("I'd like {} toast please", meal.toast);
